@@ -9,6 +9,7 @@ function App() {
      <h2>site</h2>
      <h2>admin</h2>
      <h2>user</h2>
+     <h2>pet</h2>
     </div>
   );
 }
