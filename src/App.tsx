@@ -11,6 +11,7 @@ function App() {
      <h2>user</h2>
      <h2>pet</h2>
      <h2>request</h2>
+     <h2>review</h2>
     </div>
   );
 }
