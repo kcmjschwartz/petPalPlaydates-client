@@ -10,6 +10,7 @@ function App() {
      <h2>admin</h2>
      <h2>user</h2>
      <h2>pet</h2>
+     <h2>request</h2>
     </div>
   );
 }
