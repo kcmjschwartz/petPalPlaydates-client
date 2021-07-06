@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Register from '../user/Register'
-import Login from '../user/Login'
+
 
 type HeaderState = {
     registerActive: boolean,
@@ -51,8 +51,8 @@ render(){
         <div>
         <header>
             <h1>Pet-Pal PlayDates</h1>
-            <button onClick={() =>this.registerActiveOn()}>{this.state.registerActive===true?<Register activeOff={this.registerActiveOff} updatedToken = {this.props.updateToken}/>:<></>}Get Started!</button>
-            <button onClick={() =>this.loginActiveOn()}>{this.state.loginActive===true?<Login activeOff={this.loginActiveOff} updatedToken = {this.props.updateToken}/>:<></>}Login</button>
+            <button onClick={() =>this.registerActiveOn()}>{this.state.registerActive===true?<Register activeOff={this.registerActiveOff} updateToken = {this.props.updateToken}/>:<></>}Get Started!</button>
+            {/* <button onClick={() =>this.loginActiveOn()}>{this.state.loginActive===true?<Login activeOff={this.loginActiveOff} updatedToken = {this.props.updateToken}/>:<></>}Login</button> */}
         </header>
         </div>
     );

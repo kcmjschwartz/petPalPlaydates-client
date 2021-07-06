@@ -16,6 +16,7 @@ class Home extends Component<AcceptedProps, HomeState>{
             this.state={
                 registerActive:false
             }
+            this.updateActiveOff = this.updateActiveOff.bind(this)
         }
     
 updateActiveOn(){
@@ -40,7 +41,7 @@ render(){
         <p></p>
         <Carousel/>
         <p></p>
-        <button onClick={() =>this.updateActiveOn()}>{this.state.registerActive===true?<Register activeOff={this.updateActiveOff} updatedToken = {this.props.updateToken}/>:<></>}Get Started!</button>
+        <button onClick={() =>this.updateActiveOn()}>{this.state.registerActive===true?<Register activeOff={this.updateActiveOff} updateToken = {this.props.updateToken}/>:<></>}Get Started!</button>
         </div>
     );
     
