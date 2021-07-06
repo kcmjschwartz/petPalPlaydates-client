@@ -9,10 +9,11 @@ type RegisterState={
     city: string
 }
 
-type AcceptedProps ={
+type AcceptedProps={
     updateToken(newToken:string, newRole:string): void,
-    activeOff(): void
+    activeOff(): void,
     }
+    
 
 export default class Register extends Component<AcceptedProps,RegisterState>{
     constructor(props:AcceptedProps){
@@ -78,13 +79,12 @@ export default class Register extends Component<AcceptedProps,RegisterState>{
         .then((result) =>{
             console.log(result);
             this.props.updateToken(result.sessionToken, result.user.role);
-            ;
-        }).catch(err => console.log(err));
+            
+        }).then(()=>this.props.activeOff())
+        .catch(err => console.log(err));
     }
 
-    componentWillUnmount(){
-        this.props.activeOff()
-    }
+
 
 
 render(){

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Register from '../user/Register'
+import Login from '../user/Login'
 
 
 type HeaderState = {
@@ -19,6 +20,8 @@ class Header extends Component<AcceptedProps, HeaderState>{
                     registerActive:false,
                     loginActive:false
                 }
+                this.registerActiveOff = this.registerActiveOff.bind(this)
+                this.loginActiveOff = this.loginActiveOff.bind(this)
             }
 //Makes Register Modal appear
 registerActiveOn(){
@@ -35,7 +38,7 @@ registerActiveOff(){
 //Makes Login Modal appear
 loginActiveOn(){
     this.setState({
-        registerActive: true
+        loginActive: true
     })
 }
 //Passed to Login Modal to close it on Submit
@@ -51,8 +54,8 @@ render(){
         <div>
         <header>
             <h1>Pet-Pal PlayDates</h1>
-            <button onClick={() =>this.registerActiveOn()}>{this.state.registerActive===true?<Register activeOff={this.registerActiveOff} updateToken = {this.props.updateToken}/>:<></>}Get Started!</button>
-            {/* <button onClick={() =>this.loginActiveOn()}>{this.state.loginActive===true?<Login activeOff={this.loginActiveOff} updatedToken = {this.props.updateToken}/>:<></>}Login</button> */}
+            <button onClick={() =>this.registerActiveOn()}style= {{visibility: localStorage.getItem('token') ? "hidden" : "visible"}}>{this.state.registerActive?<Register activeOff={this.registerActiveOff} updateToken = {this.props.updateToken}/>:<></>}Get Started!</button>
+            <button onClick={() =>this.loginActiveOn()}style= {{visibility: localStorage.getItem('token') ? "hidden" : "visible"}}>{this.state.loginActive?<Login activeLoginOff={this.loginActiveOff} updateToken = {this.props.updateToken}/>:<></>}Login</button>
         </header>
         </div>
     );
