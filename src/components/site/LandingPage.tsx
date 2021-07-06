@@ -1,15 +1,32 @@
-import React from 'react';
+import React, {Component} from 'react';
 
+type LandingPageState={
 
-const LandingPage = (props) => {
+}
 
+type AcceptedProps ={
+    clearToken():void,
+    token:string,
+    role: string
 
-    return (
-        <header>
+    }
+
+class LandingPage extends Component <AcceptedProps, LandingPageState>{
+    constructor(props:AcceptedProps){
+        super(props);
             
-        </header>
-    );
+        
+    }
 
+
+render(){
+    return (
+        <div>
+
+            <h1>You have landed!</h1>
+        </div>
+    );
+    }
 }
 
 

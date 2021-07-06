@@ -7,7 +7,8 @@ import Header from './components/site/Header';
 
 
 type AppState = {
-  sessionToken: string | null
+  sessionToken: string | null,
+  sessionRole: string | null
 }
 
 type AcceptedProps={
@@ -18,7 +19,8 @@ class App extends Component <AcceptedProps, AppState>{
   constructor(props:AcceptedProps){
     super(props);
     this.state = {
-      sessionToken:('')
+      sessionToken:(''),
+      sessionRole:('')
 
   }
   this.protectedViews = this.protectedViews.bind(this)
@@ -29,36 +31,40 @@ class App extends Component <AcceptedProps, AppState>{
 componentDidMount(){
     if (localStorage.getItem('token')){
       this.setState({
-        sessionToken: localStorage.getItem('token')
+        sessionToken: localStorage.getItem('token'),
+        sessionRole: localStorage.getItem('role')
       })
     }
   }
 
-updateToken(newToken:string){
+updateToken(newToken:string, newRole:string){
     localStorage.setItem('token', newToken);
+    localStorage.setItem('role', newRole)
     this.setState({
-      sessionToken: newToken
-    },() =>console.log(this.state.sessionToken))
+      sessionToken: newToken,
+      sessionRole: newRole
+    },() =>console.log(this.state.sessionToken, this.state.sessionRole))
     
 }
 
 clearToken(){
   localStorage.clear();
   this.setState({
-    sessionToken: ''
+    sessionToken: '',
+    sessionRole:''
   })
 }
- 
+
 protectedViews(){                                                                                                
-    return (this.state.sessionToken === localStorage.getItem('token') ? <LandingPage updatedToken={this.updateToken} token ={this.state.sessionToken} clearToken={this.clearToken()}/>
+    return (this.state.sessionToken === localStorage.getItem('token') ? <LandingPage role={this.state.sessionRole} token ={this.state.sessionToken} clearToken={this.clearToken()}/>
     : <Home updateToken={this.updateToken}/>)}
 
 render(){
   return (
     <div className="App">
-     <Header updatedToken={this.updateToken}/>
+      <Header updatedToken={this.updateToken}/>
       {this.protectedViews()}
-     <Footer />
+      <Footer />
     </div>
   )
 }

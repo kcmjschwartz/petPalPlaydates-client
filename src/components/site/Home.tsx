@@ -7,7 +7,7 @@ type HomeState = {
 }
 
 type AcceptedProps ={
-updateToken(newToken:string): void
+updateToken(newToken:string, newRole:string): void
 }
 
 class Home extends Component<AcceptedProps, HomeState>{
@@ -27,7 +27,7 @@ updateActiveOn(){
 
 updateActiveOff(){
     this.setState({
-        registerActive: true
+        registerActive: false
     })
 }
 
