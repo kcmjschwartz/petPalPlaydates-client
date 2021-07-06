@@ -3,23 +3,23 @@ import React, {Component} from 'react';
 type LandingPageState={
 
 }
+const LandingPage = ()=>{
+// // type AcceptedProps ={
+// //     clearToken():void,
+// //     token:string,
+// //     role: string
 
-type AcceptedProps ={
-    clearToken():void,
-    token:string,
-    role: string
+// //     }
 
-    }
-
-class LandingPage extends Component <AcceptedProps, LandingPageState>{
-    constructor(props:AcceptedProps){
-        super(props);
+// class LandingPage extends Component <AcceptedProps, LandingPageState>{
+//     constructor(props:AcceptedProps){
+//         super(props);
             
         
-    }
+//     }
 
 
-render(){
+// render(){
     return (
         <div>
 
@@ -27,7 +27,7 @@ render(){
         </div>
     );
     }
-}
+// }
 
 
 export default LandingPage;
