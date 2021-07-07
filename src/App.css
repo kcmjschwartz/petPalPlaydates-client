@@ -1,1 +1,71 @@
+@import '~antd/dist/antd.css';
 
+body {
+    padding: 15px;
+    background-color: white;
+    font: Belleza;
+  }
+  
+  /* footer */
+  footer {
+    background-color: #6D17B9;
+    color: white;
+    margin-top: 10px;
+  }
+  
+  footer p{
+    text-align: center;
+    margin-top: 0.8em!important;
+    margin-left: 1.5em;
+  }
+  
+  /* main */
+  
+  .main {
+    display: flex;
+    background: rgb(62,35,158);
+    background: linear-gradient(143deg, rgba(62,35,158,1) 0%, rgba(246,243,249,1) 47%, rgba(22,102,43,1) 90%);
+    color: white;
+    height: 100%;
+    min-height: 100%;
+  }
+  
+  .mainDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    margin: auto;
+    width: 90%;
+    padding: 5px;
+  }
+
+/* header */
+
+.header {
+    margin-top: 0.5em!important;
+    text-align: center;
+    background-color: #6D17B9;
+    color: rgb(255, 255, 255);
+  
+  }
+  
+  .header a {
+    color: white;
+  }
+  
+  .header p {
+    margin-top: 0.8em!important;
+  }
+
+
+  .carousel{
+      max-width: 800px;
+  }
+
+
+.site-page-header-ghost-wrapper {
+    padding: 24px;
+    background-color: #6D17B9;
+    
+  }

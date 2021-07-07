@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import LandingPage from './components/site/LandingPage';
 import Home from './components/site/Home' 
@@ -64,10 +65,12 @@ protectedViews(){
 render(){
   return (
     <div className="App">
+     
       <Header updateToken={this.updateToken}/>
       {this.protectedViews()}
       <Footer />
     </div>
+    
   )
 }
 }
