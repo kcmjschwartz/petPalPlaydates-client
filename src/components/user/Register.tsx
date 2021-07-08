@@ -1,5 +1,5 @@
 import React,{ Component } from 'react';
-import{Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody} from 'reactstrap';
+import{Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 
 type RegisterState={
     email: string,
@@ -89,8 +89,9 @@ export default class Register extends Component<AcceptedProps,RegisterState>{
 
 render(){
     return(
-        <Modal isOpen= {true} >
-            <ModalHeader>Register</ModalHeader>
+        <Modal isOpen= {true} className="standardFont">
+            {/* <ModalHeader>Register</ModalHeader> */}
+            <h2 className="standardModalHeading">Register</h2>
             <ModalBody>
                 <Form onSubmit={e=> this.registerUser(e)}>
                     <FormGroup>
@@ -113,9 +114,13 @@ render(){
                         <Label htmlFor="password">Password:</Label>
                         <Input name="password" value={this.state.password} onChange={(e) => this.passwordUpdate(e)}/>
                     </FormGroup>
-                    <Button type="submit">Submit</Button>
+                    <Button className="standardButton" type="submit">Submit</Button>
+                    
                 </Form>
             </ModalBody>
+            <ModalFooter>
+            <Button  className="standardButton" onClick={()=>this.props.activeOff()}>Cancel</Button>
+            </ModalFooter>
         </Modal>  
         
     )

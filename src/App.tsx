@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import LandingPage from './components/site/LandingPage';
 import Home from './components/site/Home' 
@@ -56,18 +57,21 @@ clearToken(){
 }
 
 protectedViews(){                                                                                                
-    return (this.state.sessionToken === localStorage.getItem('token') ? <LandingPage/> 
-    // role={this.state.sessionRole} token ={this.state.sessionToken} clearToken={this.clearToken()}
+    return (this.state.sessionToken === localStorage.getItem('token') ? <LandingPage role={this.state.sessionRole} token ={this.state.sessionToken} clearToken={this.clearToken}/>  
     
     : <Home updateToken={this.updateToken}/>)}
 
 render(){
   return (
     <div className="App">
-      <Header updateToken={this.updateToken}/>
+    
+     <Header updateToken={this.updateToken}/>
+       
       {this.protectedViews()}
+    
       <Footer />
     </div>
+    
   )
 }
 }

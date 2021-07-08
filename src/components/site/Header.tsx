@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-import Register from '../user/Register'
-import Login from '../user/Login'
+import Register from '../user/Register';
+import Login from '../user/Login';
+import {Navbar, Button} from 'reactstrap'
+
 
 
 type HeaderState = {
@@ -51,13 +53,18 @@ loginActiveOff(){
 
 render(){
    return (
-        <div>
-        <header>
-            <h1>Pet-Pal PlayDates</h1>
-            <button onClick={() =>this.registerActiveOn()}style= {{visibility: localStorage.getItem('token') ? "hidden" : "visible"}}>{this.state.registerActive?<Register activeOff={this.registerActiveOff} updateToken = {this.props.updateToken}/>:<></>}Get Started!</button>
-            <button onClick={() =>this.loginActiveOn()}style= {{visibility: localStorage.getItem('token') ? "hidden" : "visible"}}>{this.state.loginActive?<Login activeLoginOff={this.loginActiveOff} updateToken = {this.props.updateToken}/>:<></>}Login</button>
-        </header>
-        </div>
+    <div >
+        <Navbar className= "header">
+            <div>
+                <h2>PetPal PlayDates</h2>
+            </div>   
+            <div>
+            <Button className="headerButton" onClick={() =>this.registerActiveOn()}style= {{visibility: localStorage.getItem('token') ? "hidden" : "visible"}}>{this.state.registerActive?<Register activeOff={this.registerActiveOff} updateToken = {this.props.updateToken} />:<></>}Get Started!</Button>
+            
+            <Button className="headerButton" onClick={() =>this.loginActiveOn()}style= {{visibility: localStorage.getItem('token') ? "hidden" : "visible"}}>{this.state.loginActive?<Login activeLoginOff={this.loginActiveOff} updateToken = {this.props.updateToken}/>:<></>}Login</Button>
+            </div>
+        </Navbar>
+    </div>  
     );
 
 }
