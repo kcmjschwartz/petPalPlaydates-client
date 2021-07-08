@@ -8,6 +8,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Navbar.css'
 import {Button, Navbar, Nav, NavLink} from 'reactstrap';
 import NavDropdown from 'react-bootstrap/NavDropdown'
+
+
+import AllPets from "../pet/AllPets"
+
 type AcceptedProps ={
     role: string | null,
     token: string | null,
@@ -26,12 +30,13 @@ class Sitebar extends Component<AcceptedProps>{
 
 render(){
     return(
+        <div>
         <div className="navbar-style">
             <Navbar expand="lg" >
                 <Nav className="my-2 my-lg-0" style={{ maxHeight: '100px' }}>
                  <div>
                 <NavDropdown title= "Pets" id ="navbarScrollingDropdown">
-                    <NavDropdown.Item href="/"className="dropdownFont">All PetPals</NavDropdown.Item>
+                    <NavDropdown.Item className="dropdownFont"><Link to ='/allpets'>All PetPals</Link></NavDropdown.Item>
                     <NavDropdown.Item href="/"className="dropdownFont">My Pets</NavDropdown.Item>
                 </NavDropdown>
                 </div>
@@ -57,12 +62,21 @@ render(){
                  {/* <NavLink href="/" style= {{visibility: this.props.role==="admin" ? "visible" : "hidden"}}className="navbar-style">Admin</NavLink> */}
                 </div>
                 <div>
-                <Button onClick={()=>this.props.clearToken()} className="headerButton">Logout</Button>
+                {/* <Button onClick={()=>this.props.clearToken()} className="headerButton">Logout</Button> */}
                 </div>
                 </Nav>
             </Navbar>
-            
-        
+        </div>
+            <div>
+                <Switch>
+                    <Route exact path ='/'><AllPets token={this.props.token}/></Route>
+                    <Route exact path ='/allpets'><AllPets token={this.props.token}/></Route>
+                </Switch>
+
+            </div>    
+
+
+
         </div>
 
 
