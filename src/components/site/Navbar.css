@@ -1,0 +1,25 @@
+.navbar-style{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: rgb(62,35,158);
+    width:100%;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    
+}
+
+#navbarScrollingDropdown{
+    color: white;
+    font-size: large;
+    padding-right: 40px;
+    font-weight: bold;
+    }
+
+.dropdownFont{
+    color: rgb(62,35,158);
+    font-weight: bold;
+    
+}    
