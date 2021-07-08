@@ -65,7 +65,7 @@ render(){
   return (
     <div className="App">
     
-     <Header updateToken={this.updateToken}/>
+     <Header updateToken={this.updateToken} clearToken={this.clearToken}/>
        
       {this.protectedViews()}
     

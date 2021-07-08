@@ -28,7 +28,7 @@ render(){
             <Router>
                 <Sitebar role={this.props.role} token={this.props.token} clearToken = {this.props.clearToken}/>
             </Router>
-            <h1 className="standardHeadingFont">You have landed!</h1>
+            {/* <h1 className="standardHeadingFont">You have landed!</h1> */}
             </div>
         </div>
 

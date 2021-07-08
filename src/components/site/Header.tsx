@@ -11,7 +11,8 @@ type HeaderState = {
 }
 
 type AcceptedProps ={
-    updateToken(newToken:string, newRole:string): void
+    updateToken(newToken:string, newRole:string): void,
+    clearToken():void
     }
 
 
@@ -62,7 +63,11 @@ render(){
             <Button className="headerButton" onClick={() =>this.registerActiveOn()}style= {{visibility: localStorage.getItem('token') ? "hidden" : "visible"}}>{this.state.registerActive?<Register activeOff={this.registerActiveOff} updateToken = {this.props.updateToken} />:<></>}Get Started!</Button>
             
             <Button className="headerButton" onClick={() =>this.loginActiveOn()}style= {{visibility: localStorage.getItem('token') ? "hidden" : "visible"}}>{this.state.loginActive?<Login activeLoginOff={this.loginActiveOff} updateToken = {this.props.updateToken}/>:<></>}Login</Button>
+            
+            <Button onClick={()=>this.props.clearToken()} className="headerButton"style= {{visibility: localStorage.getItem('token') ? "visible" : "hidden"}}>Logout</Button>
+            
             </div>
+           
         </Navbar>
     </div>  
     );
