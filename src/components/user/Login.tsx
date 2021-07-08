@@ -1,5 +1,5 @@
 import React,{ Component } from 'react';
-import{Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody} from 'reactstrap';
+import{Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 
 type LoginState={
     email: string,
@@ -62,8 +62,11 @@ type AcceptedProps={
         
         render(){
             return(
-                <Modal isOpen= {true} >
-                    <ModalHeader>Login</ModalHeader>
+                <div>
+                <Modal isOpen= {true} className="standardFont">
+                    {/* <ModalHeader className="standardModalHeading" cssModule={{'modal-title': 'w-100 text-center', 'modal-title-color': '#3E239E'}}>Login</ModalHeader> */}
+                    <h2 className="standardModalHeading">Login</h2>
+                    
                     <ModalBody>
                         <Form onSubmit={e=> this.loginUser(e)}>
                         
@@ -75,10 +78,14 @@ type AcceptedProps={
                                 <Label htmlFor="password">Password:</Label>
                                 <Input name="password" value={this.state.password} onChange={(e) => this.passwordUpdate(e)}/>
                             </FormGroup>
-                            <Button type="submit">Submit</Button>
-                        </Form>
+                            <Button className="standardButton" type="submit">Submit</Button>
+                          </Form>
                     </ModalBody>
-                </Modal>  
+                    <ModalFooter>
+                       <Button className="standardButton" onClick={()=>this.props.activeLoginOff()}>Cancel</Button>
+                    </ModalFooter>
+                </Modal> 
+                </div> 
                 
             )
         }

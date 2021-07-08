@@ -1,33 +1,39 @@
 import React, {Component} from 'react';
+import Sitebar from '../site/Navbar';
+    import {
+        BrowserRouter as Router 
+        } from 'react-router-dom';
 
-type LandingPageState={
 
+type AcceptedProps ={
+    role:string | null,
+    token: string | null,
+    clearToken():void
 }
-const LandingPage = ()=>{
-// // type AcceptedProps ={
-// //     clearToken():void,
-// //     token:string,
-// //     role: string
 
-// //     }
+class LandingPage extends Component<AcceptedProps>{
+    constructor(props:AcceptedProps){
+        super(props);
+        this.state={
 
-// class LandingPage extends Component <AcceptedProps, LandingPageState>{
-//     constructor(props:AcceptedProps){
-//         super(props);
-            
-        
-//     }
+        }
+    }
 
 
-// render(){
+
+render(){
     return (
-        <div>
-
-            <h1>You have landed!</h1>
+        <div className = "main">
+            <div className = "mainDiv">
+            <Router>
+                <Sitebar role={this.props.role} token={this.props.token} clearToken = {this.props.clearToken}/>
+            </Router>
+            <h1 className="standardHeadingFont">You have landed!</h1>
+            </div>
         </div>
+
     );
     }
-// }
-
+}
 
 export default LandingPage;

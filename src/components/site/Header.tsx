@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Register from '../user/Register';
 import Login from '../user/Login';
-import {PageHeader, Button} from 'antd'
+import {Navbar, Button} from 'reactstrap'
 
 
 
@@ -53,17 +53,18 @@ loginActiveOff(){
 
 render(){
    return (
-    <div className="site-page-header-ghost-wrapper">
-        <PageHeader
-            ghost={true}
-            title="Pet-Pal Play Dates"
-            extra={[<>
-            <Button key = "2" onClick={() =>this.registerActiveOn()}style= {{visibility: localStorage.getItem('token') ? "hidden" : "visible"}}>{this.state.registerActive?<Register activeOff={this.registerActiveOff} updateToken = {this.props.updateToken}/>:<></>}Get Started!</Button>
-            <Button key = "1"onClick={() =>this.loginActiveOn()}style= {{visibility: localStorage.getItem('token') ? "hidden" : "visible"}}>{this.state.loginActive?<Login activeLoginOff={this.loginActiveOff} updateToken = {this.props.updateToken}/>:<></>}Login</Button>
-            </>]}
-        >
-        </PageHeader>
-        </div>  
+    <div >
+        <Navbar className= "header">
+            <div>
+                <h2>PetPal PlayDates</h2>
+            </div>   
+            <div>
+            <Button className="headerButton" onClick={() =>this.registerActiveOn()}style= {{visibility: localStorage.getItem('token') ? "hidden" : "visible"}}>{this.state.registerActive?<Register activeOff={this.registerActiveOff} updateToken = {this.props.updateToken} />:<></>}Get Started!</Button>
+            
+            <Button className="headerButton" onClick={() =>this.loginActiveOn()}style= {{visibility: localStorage.getItem('token') ? "hidden" : "visible"}}>{this.state.loginActive?<Login activeLoginOff={this.loginActiveOff} updateToken = {this.props.updateToken}/>:<></>}Login</Button>
+            </div>
+        </Navbar>
+    </div>  
     );
 
 }
