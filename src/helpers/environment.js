@@ -7,7 +7,7 @@ switch (window.location.hostname) {
         APIURL = 'http://localhost:4000';
         break;
 
-    case 'kcs-hoa-client.herokuapp.com':
+    case 'kcs-petpals.herokuapp.com':
 
         APIURL='https://kcs-petpals-server.herokuapp.com'
 
