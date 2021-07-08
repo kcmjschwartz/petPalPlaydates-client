@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import dogIcon from '../../assets/6366326-256.png'
 import catIcon from '../../assets/3204629-256.png'
 
-
+import APIURL from '../../helpers/environment'
 
 type AllPetsState={
     pets: IPets[]
@@ -36,7 +36,7 @@ class AllPets extends Component<AcceptedProps, AllPetsState>{
     }
 
     fetchAllPets(){
-        fetch('http://localhost:4000/pet/allpets',{
+        fetch(`${APIURL}/pet/allpets`,{
             method:'GET',
             headers: new Headers ({
                 'Content-Type' : 'application/json'
