@@ -10,7 +10,7 @@ import {Button, Navbar, Nav, NavLink} from 'reactstrap';
 import NavDropdown from 'react-bootstrap/NavDropdown'
 
 
-import AllPets from "../pet/AllPets"
+import AllPetsIndex from "../pet/AllPetsIndex"
 
 type AcceptedProps ={
     role: string | null,
@@ -69,8 +69,8 @@ render(){
         </div>
             <div>
                 <Switch>
-                    <Route exact path ='/'><AllPets token={this.props.token}/></Route>
-                    <Route exact path ='/allpets'><AllPets token={this.props.token}/></Route>
+                    <Route exact path ='/'><AllPetsIndex token={this.props.token}/></Route>
+                    <Route exact path ='/allpets'><AllPetsIndex token={this.props.token}/></Route>
                 </Switch>
 
             </div>    
