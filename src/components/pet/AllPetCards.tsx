@@ -9,7 +9,7 @@ import catIcon from '../../assets/3204629-256.png'
 
 
 type AcceptedProps ={
-    token: string | null,
+    token: string,
     petViewActiveOn(): void,
     petList:IPets[],
     viewThisPet(pet:IPets):void

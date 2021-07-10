@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
-import{Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
+import{Button, Modal, ModalBody, ModalFooter} from 'reactstrap';
 import dogIcon from '../../assets/6366326-256.png'
 import catIcon from '../../assets/3204629-256.png'
 
 
 type AcceptedProps ={
-    token: string | null,
+    token: string,
     petToView:IPets,
     petViewActiveOff(): void
 
@@ -35,8 +35,9 @@ render(){
             <ModalBody>
             <img src={this.props.petToView.petType=='Dog'? `${dogIcon}`:this.props.petToView.petType=='Cat'?`${catIcon}`:'...'} className="standardIcon" alt="..."/>
             <br/>
+           
             <h4 className="petHeading">About:</h4>
-            <p>{this.props.petToView.description}</p>
+            <p className="standardFont">{this.props.petToView.description}</p>
             <Button className="standardButton" >Request a PlayDate</Button>
             </ModalBody>
             <ModalFooter>

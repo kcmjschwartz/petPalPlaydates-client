@@ -6,8 +6,8 @@ import Sitebar from '../site/Navbar';
 
 
 type AcceptedProps ={
-    role:string | null,
-    token: string | null,
+    role:string,
+    token: string,
     clearToken():void
 }
 

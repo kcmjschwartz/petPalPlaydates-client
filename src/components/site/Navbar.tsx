@@ -6,15 +6,16 @@ import {
 } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Navbar.css'
-import {Button, Navbar, Nav, NavLink} from 'reactstrap';
+import {Navbar, Nav} from 'reactstrap';
 import NavDropdown from 'react-bootstrap/NavDropdown'
 
 
 import AllPetsIndex from "../pet/AllPetsIndex"
+import MyPetsIndex from "../pet/MyPetsIndex"
 
 type AcceptedProps ={
-    role: string | null,
-    token: string | null,
+    role: string,
+    token: string,
     clearToken():void
 }
 
@@ -37,7 +38,7 @@ render(){
                  <div>
                 <NavDropdown title= "Pets" id ="navbarScrollingDropdown">
                     <NavDropdown.Item className="dropdownFont"><Link to ='/allpets'>All PetPals</Link></NavDropdown.Item>
-                    <NavDropdown.Item href="/"className="dropdownFont">My Pets</NavDropdown.Item>
+                    <NavDropdown.Item href="/"className="dropdownFont"><Link to = '/mypets'>My Pets</Link></NavDropdown.Item>
                 </NavDropdown>
                 </div>
                  <div >
@@ -48,16 +49,16 @@ render(){
                 </div>
                  
                  <div>
-                 <NavDropdown title= "Reviews" id ="navbarScrollingDropdown">
+                 {/* <NavDropdown title= "Reviews" id ="navbarScrollingDropdown">
                     <NavDropdown.Item href="/" className="dropdownFont">Written For My Pets</NavDropdown.Item>
                     <NavDropdown.Item href="/" className="dropdownFont">PetPals Reviewed By Me</NavDropdown.Item>
-                </NavDropdown>
+                </NavDropdown> */} 
                  {/* <NavLink href="/" className="navbar-style">Reviews</NavLink> */}
                 </div>
                  <div>
                  <NavDropdown title= "Admin" id ="navbarScrollingDropdown" style= {{visibility: this.props.role==="admin" ? "visible" : "hidden"}}>
                     <NavDropdown.Item href="/" className="dropdownFont">Manage Users</NavDropdown.Item>
-                    <NavDropdown.Item href="/" className="dropdownFont">Manage Reviews</NavDropdown.Item>
+                    {/* <NavDropdown.Item href="/" className="dropdownFont">Manage Reviews</NavDropdown.Item> */}
                 </NavDropdown>    
                  {/* <NavLink href="/" style= {{visibility: this.props.role==="admin" ? "visible" : "hidden"}}className="navbar-style">Admin</NavLink> */}
                 </div>
@@ -71,6 +72,7 @@ render(){
                 <Switch>
                     <Route exact path ='/'><AllPetsIndex token={this.props.token}/></Route>
                     <Route exact path ='/allpets'><AllPetsIndex token={this.props.token}/></Route>
+                    <Route exact path ='/mypets'><MyPetsIndex token={this.props.token}/></Route>
                 </Switch>
 
             </div>    

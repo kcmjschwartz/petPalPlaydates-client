@@ -18,7 +18,7 @@ interface IPets{
     }
 
     type AcceptedProps ={
-    token: string | null,
+    token: string,
     
 }
 
