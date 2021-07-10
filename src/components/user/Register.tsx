@@ -1,6 +1,8 @@
 import React,{ Component } from 'react';
 import{Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 
+import APIURL from '../../helpers/environment'
+
 type RegisterState={
     email: string,
     password: string,
@@ -60,7 +62,7 @@ export default class Register extends Component<AcceptedProps,RegisterState>{
 
     registerUser(e:React.FormEvent<HTMLFormElement>){
         e.preventDefault();
-        let url = 'http://localhost:4000/user/register'
+        let url = `${APIURL}/user/register`
         fetch(url,{
             method: 'POST',
             body: JSON.stringify({

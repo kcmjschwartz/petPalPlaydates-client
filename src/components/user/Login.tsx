@@ -1,5 +1,6 @@
 import React,{ Component } from 'react';
 import{Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
+import APIURL from '../../helpers/environment'
 
 type LoginState={
     email: string,
@@ -36,7 +37,7 @@ type AcceptedProps={
 
         loginUser(e:React.FormEvent<HTMLFormElement>){
             e.preventDefault();
-            let url = 'http://localhost:4000/user/login'
+            let url = `${APIURL}/user/login`
             fetch(url,{
                 method: 'POST',
                 body: JSON.stringify({
