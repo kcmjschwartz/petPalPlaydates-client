@@ -66,7 +66,7 @@ render(){
             <h2 className="standardModalHeading">{this.props.myPetToEdit.petName}</h2>
             <ModalBody>
                 
-                <img src={this.props.myPetToEdit.petType=='Dog'? `${dogIcon}`:this.props.myPetToEdit.petType=='Cat'?`${catIcon}`:'...'} className="standardIcon" alt="..."/>
+                <img src={this.props.myPetToEdit.petType==='Dog'? `${dogIcon}`:this.props.myPetToEdit.petType==='Cat'?`${catIcon}`:'...'} className="standardIcon" alt="..."/>
                 <br/>
                 <p className="standardFont">{this.props.myPetToEdit.petType}</p>
                 

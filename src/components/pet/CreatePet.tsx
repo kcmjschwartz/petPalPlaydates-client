@@ -1,4 +1,4 @@
-import React,{ Component, TextareaHTMLAttributes } from 'react';
+import React,{ Component} from 'react';
 import{Button, Form, FormGroup, Label, Input, Modal, ModalBody, ModalFooter} from 'reactstrap';
 
 import APIURL from '../../helpers/environment'
@@ -56,8 +56,7 @@ export default class CreatePet extends Component<AcceptedProps,CreatePetState>{
                     petName: this.state.petName,
                     petType: this.state.petType,
                     description: this.state.description,
-                   
-                }}), 
+                  }}), 
             headers: new Headers({
                 'Content-Type': 'application/json',
                 'Authorization' : this.props.token
@@ -82,12 +81,12 @@ render(){
             <ModalBody>
                 <Form onSubmit={e=> this.createPet(e)}>
                     <FormGroup>
-                        <Label htmlFor="petName" style={{fontSize:'2em', fontFamily:"'Luckiest Guy', cursive"}}>Pet Name:</Label>
-                        <Input name="petName" value={this.state.petName} onChange={(e) => this.petNameUpdate(e)}/>
+                        <Label htmlFor="petName" className="petHeading"style={{fontSize:'2em', fontFamily:"'Luckiest Guy', cursive"}}>Pet Name:</Label>
+                        <Input name="petName" value={this.state.petName} onChange={(e) => this.petNameUpdate(e)} required/>
                     </FormGroup>
                     <FormGroup>
-                        <Label htmlFor="petType" style={{fontSize:'2em', fontFamily:"'Luckiest Guy', cursive"}}>Pet Type:</Label>
-                        <Input type= "select" name="petType" value={this.state.petType} onChange={(e) => this.petTypeUpdate(e)}>
+                        <Label htmlFor="petType" className="petHeading" style={{fontSize:'2em', fontFamily:"'Luckiest Guy', cursive"}}>Pet Type:</Label>
+                        <Input type= "select" name="petType" value={this.state.petType} onChange={(e) => this.petTypeUpdate(e)} required>
                         <option></option>
                         <option value = "Dog">Dog</option>
                         <option value = "Cat">Cat</option>
@@ -99,7 +98,7 @@ render(){
                     <FormGroup>
                         <Label htmlFor="description" className="petHeading"style={{fontSize:'2em'}}>About:</Label>
                         <p className="standardFont">Tell us about your pet! (Ex. age, breed, activity level,favorite toy/treat)</p>
-                        <Input type="textarea" name="description" value={this.state.description} onChange={(e) => this.petDescriptionUpdate(e)}/>
+                        <Input type="textarea" name="description" value={this.state.description} onChange={(e) => this.petDescriptionUpdate(e)} required/>
                     </FormGroup>
                     <Button className="standardButton" type="submit">Submit</Button>
                     
