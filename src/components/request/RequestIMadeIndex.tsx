@@ -30,7 +30,7 @@ interface IRequests{
     
 }
 
-class MyPetsIndex extends Component<AcceptedProps, RequestsState>{
+class MyRequestsIndex extends Component<AcceptedProps, RequestsState>{
     constructor(props:AcceptedProps){
         super(props);
         this.state={
@@ -121,4 +121,4 @@ render(){
     }
 }
 
-export default MyPetsIndex;
+export default MyRequestsIndex;
