@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Table} from 'reactstrap';
 import APIURL from '../../helpers/environment'
 import MyPetList from './MyPets'
 import UpdatePet from './UpdatePet'
@@ -111,10 +112,23 @@ render(){
             <div className="petDisplay">
 
                 {this.state.myPets.length===0 ? <h3 className = "standardFont">No Pets to Display.</h3>: null}
-
+                <Table>
+                    <thead>
+                        <tr>
+                            <th><h4 className="petHeading">Pet</h4></th>
+                            <th><h4 className="petHeading">Pet Name</h4></th>
+                            <th><h4 className="petHeading">Pet Type</h4></th>
+                            <th><h4 className="petHeading">About</h4></th>
+                            <th><h4 className="petHeading">Update</h4></th>
+                            <th><h4 className="petHeading">Delete</h4></th>
+                        </tr>
+                    </thead>
+                        <tbody>
                 <MyPetList myPetList={this.state.myPets} editMyPet = {this.editMyPet} myPetEditActiveOn ={this.myPetEditActiveOn} token = {this.props.token} fetchMyPets={this.fetchMyPets}/>
 
                 {this.state.myPetEditActive?<UpdatePet myPetEditActiveOff={this.myPetEditActiveOff} token = {this.props.token} myPetToEdit={this.state.myPetToEdit} fetchMyPets={this.fetchMyPets}/>:<></>}
+                </tbody>
+                </Table>
         </div>
             
         </div>

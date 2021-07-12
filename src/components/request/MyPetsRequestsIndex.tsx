@@ -25,8 +25,16 @@ interface IRequests{
     petId:number,
     status: string,
     wayToContact: string,
-    comments: string
+    comments: string,
+    user: IUsers
 }
+
+interface IUsers{
+    id:number,
+    firstName: string,
+    lastName: string,
+    role: string
+    }
 
     type AcceptedProps ={
     token: string,
@@ -44,7 +52,14 @@ class MyPetsRequestsIndex extends Component<AcceptedProps, MyPetsRequestsState>{
                 petId:0,
                 status: '',
                 wayToContact: '',
-                comments: ''
+                comments: '',
+                user: {
+                    id:0,
+                    firstName:'',
+                    lastName:'',
+                    role:'',
+
+                }
             },
             
         }

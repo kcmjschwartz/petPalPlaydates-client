@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import {Table} from 'reactstrap';
 
 
 
@@ -29,9 +29,17 @@ interface IPets{
         status: string,
         wayToContact: string,
         comments: string
+        user: IUsers
     }
 
-class MyPetList extends Component<AcceptedProps>{
+    interface IUsers{
+        id:number,
+        firstName: string,
+        lastName: string,
+        role: string
+        }
+
+class MyPetsRequestList extends Component<AcceptedProps>{
     constructor(props:AcceptedProps){
         super(props);{
 
@@ -51,28 +59,40 @@ myRequestPetMapper(){
                 return( /*How I want to display my pets*/
                     <div key={index}>                
                         <div >
-                            <h4 className="petHeading" style={{fontSize:"3em"}}>{pet.petName}</h4>
+                            <h4 className="petHeading" style={{fontSize:"3em", color: '#3E239E'}}>{pet.petName}</h4>
                             <div className = "petDisplay">                                        
-                                {pet.requests.length === 0? <h4 className="standardFont">No Requests to Display</h4>: pet.requests.map((request:IRequests, index)=>
+                                {pet.requests.length === 0? <h4 className="standardFont">No Requests to Display</h4>: <Table>
+                                        <thead>
+                                            <tr>
+                                                <th><h4 className="petHeading">From</h4></th>
+                                                <th><h4 className="petHeading">Status</h4></th>
+                                                <th><h4 className="petHeading">Way To Contact</h4></th>
+                                                <th><h4 className="petHeading">Comments</h4></th>
+                                                <th><h4 className="petHeading">Update</h4></th>
+                                            </tr>
+                                        </thead>
+                                            <tbody> 
+                                    {pet.requests.map((request:IRequests, index)=>
                                 {
                                     return(
-                                        <div className="card" style={{width:'400px' }} key={index}>
-                                        <h4 className="petHeading">Status:</h4><h5 className="standardFont">{request.status}</h5>
+                                        <tr key={index}>
+                                        <td><h6 className="standardFont">{request.user.firstName} {request.user.lastName}</h6></td>
+                                        <td><h6 className="standardFont">{request.status}</h6></td>
                                         
-                                        <h4 className="petHeading">Way To Contact:</h4><h5 className="standardFont">{request.wayToContact}</h5>
-                                        <h4 className="petHeading">Comments:</h4>
-                                        <p className="standardFont">{request.comments}</p>
-                                        <button className="btn standardButton" onClick={()=>{this.props.myPetsRequestEditActiveOn(); this.props.editMyPetsRequest(request)}}style ={{width:'150px'}}>Update Status</button>
-                                        </div>
+                                        <td><h6 className="standardFont">{request.wayToContact}</h6></td>
+                                        
+                                        <td><p className="standardFont">{request.comments}</p></td>
+                                        <td><button className="btn standardButton" onClick={()=>{this.props.myPetsRequestEditActiveOn(); this.props.editMyPetsRequest(request)}}style ={{width:'150px'}}>Update Status</button></td>
+                                        </tr>
                                     )
                                 }
                                 )}
-
-                                
-                                </div>
+                                            </tbody>
+                                </Table>
+                                }  
                         
+                            </div>
                         </div>
-                        
 
                     </div>
                     
@@ -91,4 +111,4 @@ render(){
     )
 }
 }
-export default MyPetList;
+export default MyPetsRequestList;
