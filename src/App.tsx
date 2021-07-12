@@ -8,8 +8,8 @@ import Header from './components/site/Header';
 
 
 type AppState = {
-  sessionToken: string | null,
-  sessionRole: string | null
+  sessionToken: string,
+  sessionRole: string
 }
 
 type AcceptedProps={
@@ -20,8 +20,8 @@ class App extends Component <AcceptedProps, AppState>{
   constructor(props:AcceptedProps){
     super(props);
     this.state = {
-      sessionToken:(''),
-      sessionRole:('')
+      sessionToken:'',
+      sessionRole:''
 
   }
   this.protectedViews = this.protectedViews.bind(this)
@@ -32,8 +32,8 @@ class App extends Component <AcceptedProps, AppState>{
 componentDidMount(){
     if (localStorage.getItem('token')){
       this.setState({
-        sessionToken: localStorage.getItem('token'),
-        sessionRole: localStorage.getItem('role')
+        sessionToken: localStorage.getItem('token') || '',
+        sessionRole: localStorage.getItem('role') || ''
       })
     }
   }
