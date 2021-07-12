@@ -14,6 +14,7 @@ import AllPetsIndex from "../pet/AllPetsIndex"
 import MyPetsIndex from "../pet/MyPetsIndex"
 import MyPetsRequestsIndex from "../request/MyPetsRequestsIndex"
 import MyRequestsIndex from "../request/RequestIMadeIndex"
+import AdminUserIndex from '../admin/AdminUserIndex'
 
 type AcceptedProps ={
     role: string,
@@ -60,7 +61,7 @@ render(){
                 </div>
                  <div>
                  <NavDropdown title= "Admin" id ="navbarScrollingDropdown" style= {{visibility: this.props.role==="admin" ? "visible" : "hidden"}}>
-                    <NavDropdown.Item  className="dropdownFont">Manage Users</NavDropdown.Item>
+                    <NavDropdown.Item  className="dropdownFont"><Link to = '/adminusers'>Manage Users</Link></NavDropdown.Item>
                     {/*Dropdown Items for Reviews if time allows
                      <NavDropdown.Item  className="dropdownFont">Manage Reviews</NavDropdown.Item> */}
                 </NavDropdown>    
@@ -75,6 +76,7 @@ render(){
                     <Route exact path ='/mypets'><MyPetsIndex token={this.props.token}/></Route>
                     <Route exact path ='/mypetsrequests'><MyPetsRequestsIndex token={this.props.token}/></Route>
                     <Route exact path ='/myrequests'><MyRequestsIndex token={this.props.token}/></Route>
+                    <Route exact path ='/adminusers'><AdminUserIndex token={this.props.token}/></Route>
                 </Switch>
 
             </div>    
