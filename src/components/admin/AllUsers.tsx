@@ -48,9 +48,8 @@ userMapper(){
     return this.props.userList.map((user:IUsers, index)=>
             {
                 return( 
-                    <tr className = "standardFont" key={index}>
-                            <td>{user.firstName}</td>
-                            <td>{user.lastName}</td>
+                    <tr className = "standardFont"style ={{fontSize:"1.3em"}} key={index}>
+                            <td>{user.firstName} {user.lastName}</td>
                             <td>{user.role}</td>
                             <td> <button className="standardButton" onClick={()=>{this.props.userEditActiveOn(); this.props.editUser(user)}}>Update Role</button></td>
                             

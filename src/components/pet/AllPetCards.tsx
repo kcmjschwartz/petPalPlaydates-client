@@ -2,7 +2,9 @@ import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import dogIcon from '../../assets/6366326-256.png'
 import catIcon from '../../assets/3204629-256.png'
-
+import smallPetIcon from '../../assets/3406425-256.png'
+import birdIcon from '../../assets/3406428-256.png'
+import reptileIcon from '../../assets/5360428-256.png'
 
 
 
@@ -37,7 +39,7 @@ petMapper(){
                 return( 
                     <div className="card" style={{width:'15em' }} key={index}>
                         
-                        <img src={pet.petType==='Dog'? `${dogIcon}`:pet.petType==='Cat'?`${catIcon}`:'...'} className="standardIcon" alt="Pet"/>
+                        <img src={pet.petType==='Dog'? `${dogIcon}`:pet.petType==='Cat'?`${catIcon}`:pet.petType==='Bird'? `${birdIcon}`:pet.petType==='Reptile'? `${reptileIcon}`: pet.petType==='Small Pet'?`${smallPetIcon}`: '...'} className="standardIcon" alt="Pet"/>
                         
                         <div className="card-body">
                             <h4 className="petHeading">{pet.petName}</h4>

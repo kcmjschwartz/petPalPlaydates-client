@@ -98,9 +98,8 @@ render(){
             <div >
             <Table striped>
                 <thead>
-                    <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
+                    <tr className="petHeading"style ={{fontSize:"2em"}}>
+                        <th>User</th>
                         <th>Role</th>
                         <th>Update</th>
                         <th>Delete</th>

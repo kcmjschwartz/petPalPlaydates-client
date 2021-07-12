@@ -2,6 +2,9 @@ import React, {Component} from 'react'
 import{Button, Modal, ModalBody, ModalFooter} from 'reactstrap';
 import dogIcon from '../../assets/6366326-256.png'
 import catIcon from '../../assets/3204629-256.png'
+import smallPetIcon from '../../assets/3406425-256.png'
+import birdIcon from '../../assets/3406428-256.png'
+import reptileIcon from '../../assets/5360428-256.png'
 import CreateRequest from '../request/CreateRequest'
 
 type RequestState={
@@ -54,7 +57,7 @@ render(){
             <Modal isOpen= {true} className="standardFont">
             <h2 className="standardModalHeading">{this.props.petToView.petName}</h2>
             <ModalBody>
-            <img src={this.props.petToView.petType==='Dog'? `${dogIcon}`:this.props.petToView.petType==='Cat'?`${catIcon}`:'...'} className="standardIcon" alt="..."/>
+            <img src={this.props.petToView.petType==='Dog'? `${dogIcon}`:this.props.petToView.petType==='Cat'?`${catIcon}`:this.props.petToView.petType==='Bird'? `${birdIcon}`:this.props.petToView.petType==='Reptile'? `${reptileIcon}`: this.props.petToView.petType==='Small Pet'?`${smallPetIcon}`: '...'} className="standardIcon" alt="..."/>
             <br/>
            
             <h4 className="petHeading">About:</h4>
