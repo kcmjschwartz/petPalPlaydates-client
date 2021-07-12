@@ -34,7 +34,8 @@ class Sitebar extends Component<AcceptedProps>{
 
 render(){
     return(
-        <div>
+     
+        <div >
         <div className="navbar-style">
             <Navbar expand="lg" >
                 <Nav className="my-2 my-lg-0" style={{ maxHeight: '100px' }}>
@@ -81,9 +82,9 @@ render(){
 
             </div>    
 
+            </div>
 
-
-        </div>
+      
 
 
 

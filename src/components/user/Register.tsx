@@ -98,23 +98,23 @@ render(){
                 <Form onSubmit={e=> this.registerUser(e)}>
                     <FormGroup>
                         <Label htmlFor="firstName">First Name:</Label>
-                        <Input name="firstName" value={this.state.firstName} onChange={(e) => this.firstNameUpdate(e)}/>
+                        <Input name="firstName" value={this.state.firstName} onChange={(e) => this.firstNameUpdate(e)} required/>
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="lastName">Last Name:</Label>
-                        <Input name="lastName" value={this.state.lastName} onChange={(e) => this.lastNameUpdate(e)}/>
+                        <Input name="lastName" value={this.state.lastName} onChange={(e) => this.lastNameUpdate(e)} required/>
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="city">City:</Label>
-                        <Input name="city" value={this.state.city} onChange={(e) => this.cityUpdate(e)}/>
+                        <Input name="city" value={this.state.city} onChange={(e) => this.cityUpdate(e)} required/>
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="email">Email:</Label>
-                        <Input name="email" value={this.state.email} onChange={(e) => this.emailUpdate(e)}/>
+                        <Input name="email" type="email" value={this.state.email} onChange={(e) => this.emailUpdate(e)} required/>
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="password">Password:</Label>
-                        <Input name="password" value={this.state.password} onChange={(e) => this.passwordUpdate(e)}/>
+                        <Input name="password" type="password" value={this.state.password} onChange={(e) => this.passwordUpdate(e)} required/>
                     </FormGroup>
                     <Button className="standardButton" type="submit">Submit</Button>
                     

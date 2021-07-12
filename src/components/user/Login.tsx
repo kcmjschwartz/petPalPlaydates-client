@@ -73,11 +73,11 @@ type AcceptedProps={
                         
                             <FormGroup>
                                 <Label htmlFor="email">Email:</Label>
-                                <Input name="email" value={this.state.email} onChange={(e) => this.emailUpdate(e)}/>
+                                <Input name="email" type="email" value={this.state.email} onChange={(e) => this.emailUpdate(e)}/>
                             </FormGroup>
                             <FormGroup>
                                 <Label htmlFor="password">Password:</Label>
-                                <Input name="password" value={this.state.password} onChange={(e) => this.passwordUpdate(e)}/>
+                                <Input name="password" type= "password" value={this.state.password} onChange={(e) => this.passwordUpdate(e)}/>
                             </FormGroup>
                             <Button className="standardButton" type="submit">Submit</Button>
                           </Form>
