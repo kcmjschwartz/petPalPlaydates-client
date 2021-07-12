@@ -4,7 +4,9 @@ const Footer = () => {
 
     return (
         <footer>
-             <p>&copy; 2021 Kasey Schwartz</p>
+            <br/>
+             <h5>&copy; 2021 Kasey Schwartz</h5>
+             <br/>
         </footer>
     );
 

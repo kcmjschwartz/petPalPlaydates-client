@@ -1,7 +1,7 @@
 
 
 body {
-   background-color: white;
+   background-color: rgb(62,35,158);
     
   }
   .standardButton{
@@ -44,11 +44,13 @@ body {
     background-color:  rgb(62,35,158);;
     color: white;
     font-family: 'Luckiest Guy', cursive;
+    height: 5em;
   }
   
-  footer p{
+  footer h5{
     text-align: center;
-    margin-top: 0.8em!important;
+    color: white;
+   
     margin-left: 1.5em;
   
   }

@@ -2,6 +2,9 @@ import React, {Component} from 'react'
 import{Button, Modal, ModalBody, ModalFooter, Form, Input, Label, FormGroup} from 'reactstrap';
 import dogIcon from '../../assets/6366326-256.png'
 import catIcon from '../../assets/3204629-256.png'
+import smallPetIcon from '../../assets/3406425-256.png'
+import birdIcon from '../../assets/3406428-256.png'
+import reptileIcon from '../../assets/5360428-256.png'
 import APIURL from '../../helpers/environment'
 
 type EditPetState={
@@ -66,7 +69,7 @@ render(){
             <h2 className="standardModalHeading">{this.props.myPetToEdit.petName}</h2>
             <ModalBody>
                 
-                <img src={this.props.myPetToEdit.petType==='Dog'? `${dogIcon}`:this.props.myPetToEdit.petType==='Cat'?`${catIcon}`:'...'} className="standardIcon" alt="..."/>
+                <img src={this.props.myPetToEdit.petType==='Dog'? `${dogIcon}`:this.props.myPetToEdit.petType==='Cat'?`${catIcon}`:this.props.myPetToEdit.petType==='Bird'? `${birdIcon}`:this.props.myPetToEdit.petType==='Reptile'? `${reptileIcon}`: this.props.myPetToEdit.petType==='Small Pet'?`${smallPetIcon}`: '...'} className="standardIcon" alt="..."/>
                 <br/>
                 <p className="standardFont">{this.props.myPetToEdit.petType}</p>
                 

@@ -2,6 +2,9 @@ import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import dogIcon from '../../assets/6366326-256.png'
 import catIcon from '../../assets/3204629-256.png'
+import smallPetIcon from '../../assets/3406425-256.png'
+import birdIcon from '../../assets/3406428-256.png'
+import reptileIcon from '../../assets/5360428-256.png'
 import APIURL from '../../helpers/environment'
 
 
@@ -58,22 +61,20 @@ myRequestMapper(){
     return this.props.myRequestList.map((request:IRequests, index)=>
             {
                 return( 
-                    <div className="card" style={{width:'30em' }} key={index}>
+                    <>
+                    <tr key={index}>
+                        <td><img src={request.pet.petType==='Dog'? `${dogIcon}`:request.pet.petType==='Cat'?`${catIcon}`:request.pet.petType==='Bird'? `${birdIcon}`:request.pet.petType==='Reptile'? `${reptileIcon}`: request.pet.petType==='Small Pet'?`${smallPetIcon}`: '...'} style={{height:'50px',width:'50px'}} alt="Pet"/></td>
+                        <td><h4 className="petHeading">{request.pet.petName}</h4></td>
+                        <td><h6 className="standardFont">{request.status}</h6></td>
+                        <td><p className="standardFont">{request.wayToContact}</p></td>
+                        <td><p className="standardFont">{request.comments}</p></td>
                         
-                        <img src={request.pet.petType==='Dog'? `${dogIcon}`:request.pet.petType==='Cat'?`${catIcon}`:'...'} className="standardIcon" alt="Pet"/>
+                        <td><button className="standardButton" onClick={()=>{this.props.myRequestEditActiveOn(); this.props.editMyRequest(request)}}>Update Request</button></td>
                         
-                        <div className="card-body">
-                            <h4 className="petHeading">{request.pet.petName}</h4>
-                            <h4 className="petHeading">Status:</h4><h5 className="standardFont">{request.status}</h5>
-                            <h4 className="petHeading">Way To Contact:</h4><h5 className="standardFont">{request.wayToContact}</h5>
-                            <h4 className="petHeading">Comments:</h4>
-                            <p className="standardFont">{request.comments}</p>
-                            
-                            <button className="standardButton" onClick={()=>{this.props.myRequestEditActiveOn(); this.props.editMyRequest(request)}}>Update Request</button>
-                            <br/><br/>
-                            <button className="standardButton" onClick={()=> {this.deleteMyRequest(request)}}> Delete</button>
-                        </div>
-                    </div>
+                        <td><button className="standardButton" onClick={()=> {this.deleteMyRequest(request)}}> Delete</button></td>
+                        
+                    </tr>
+                    </>
         )
         
     }
