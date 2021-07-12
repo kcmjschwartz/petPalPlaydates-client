@@ -12,6 +12,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 
 import AllPetsIndex from "../pet/AllPetsIndex"
 import MyPetsIndex from "../pet/MyPetsIndex"
+import MyPetsRequestsIndex from "../request/MyPetsRequestsIndex"
+import MyRequestsIndex from "../request/RequestIMadeIndex"
 
 type AcceptedProps ={
     role: string,
@@ -38,18 +40,19 @@ render(){
                  <div>
                 <NavDropdown title= "Pets" id ="navbarScrollingDropdown">
                     <NavDropdown.Item className="dropdownFont"><Link to ='/allpets'>All PetPals</Link></NavDropdown.Item>
-                    <NavDropdown.Item href="/"className="dropdownFont"><Link to = '/mypets'>My Pets</Link></NavDropdown.Item>
+                    <NavDropdown.Item  className="dropdownFont"><Link to = '/mypets'>My Pets</Link></NavDropdown.Item>
                 </NavDropdown>
                 </div>
                  <div >
                 <NavDropdown title= "Requests" id ="navbarScrollingDropdown">
-                    <NavDropdown.Item href="/" className="dropdownFont">For My Pets</NavDropdown.Item>
-                    <NavDropdown.Item href="/" className="dropdownFont">For My PetPals</NavDropdown.Item>
+                    <NavDropdown.Item  className="dropdownFont"><Link to = '/mypetsrequests'>For My Pets</Link></NavDropdown.Item>
+                    <NavDropdown.Item  className="dropdownFont"><Link to ='/myrequests'>For My PetPals</Link></NavDropdown.Item>
                 </NavDropdown>
                 </div>
                  
                  <div>
-                 {/* <NavDropdown title= "Reviews" id ="navbarScrollingDropdown">
+                 {/* Dropdown for Reviews if time allows
+                 <NavDropdown title= "Reviews" id ="navbarScrollingDropdown">
                     <NavDropdown.Item href="/" className="dropdownFont">Written For My Pets</NavDropdown.Item>
                     <NavDropdown.Item href="/" className="dropdownFont">PetPals Reviewed By Me</NavDropdown.Item>
                 </NavDropdown> */} 
@@ -57,13 +60,10 @@ render(){
                 </div>
                  <div>
                  <NavDropdown title= "Admin" id ="navbarScrollingDropdown" style= {{visibility: this.props.role==="admin" ? "visible" : "hidden"}}>
-                    <NavDropdown.Item href="/" className="dropdownFont">Manage Users</NavDropdown.Item>
-                    {/* <NavDropdown.Item href="/" className="dropdownFont">Manage Reviews</NavDropdown.Item> */}
+                    <NavDropdown.Item  className="dropdownFont">Manage Users</NavDropdown.Item>
+                    {/*Dropdown Items for Reviews if time allows
+                     <NavDropdown.Item  className="dropdownFont">Manage Reviews</NavDropdown.Item> */}
                 </NavDropdown>    
-                 {/* <NavLink href="/" style= {{visibility: this.props.role==="admin" ? "visible" : "hidden"}}className="navbar-style">Admin</NavLink> */}
-                </div>
-                <div>
-                {/* <Button onClick={()=>this.props.clearToken()} className="headerButton">Logout</Button> */}
                 </div>
                 </Nav>
             </Navbar>
@@ -73,6 +73,8 @@ render(){
                     <Route exact path ='/'><AllPetsIndex token={this.props.token}/></Route>
                     <Route exact path ='/allpets'><AllPetsIndex token={this.props.token}/></Route>
                     <Route exact path ='/mypets'><MyPetsIndex token={this.props.token}/></Route>
+                    <Route exact path ='/mypetsrequests'><MyPetsRequestsIndex token={this.props.token}/></Route>
+                    <Route exact path ='/myrequests'><MyRequestsIndex token={this.props.token}/></Route>
                 </Switch>
 
             </div>    
