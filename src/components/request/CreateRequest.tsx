@@ -1,4 +1,4 @@
-import React,{ Component} from 'react';
+import React,{Component} from 'react';
 import{Button, Form, FormGroup, Label, Input, Modal, ModalBody, ModalFooter} from 'reactstrap';
 
 import APIURL from '../../helpers/environment'
