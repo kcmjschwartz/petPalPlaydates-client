@@ -25,14 +25,18 @@ render(){
     return (
         <div className = "main">
             <div className = "mainDiv">
+
             <Router>
-                <Sitebar role={this.props.role} token={this.props.token} clearToken = {this.props.clearToken}/>
+                
+                <Sitebar role={this.props.role} token={this.props.token} clearToken = {this.props.clearToken} />
+                
             </Router>
-            {/* <h1 className="standardHeadingFont">You have landed!</h1> */}
             </div>
         </div>
+            
+        
 
-    );
+    )
     }
 }
 

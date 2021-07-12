@@ -81,6 +81,7 @@ class AllPetsIndex extends Component<AcceptedProps, AllPetsState>{
 
 render(){
     return (
+      
         <div>
         <h1 className="standardHeadingFont">Meet The PetPals</h1>
              <div className="petDisplay">
@@ -88,8 +89,8 @@ render(){
 
                  {this.state.petViewActive?<ViewPet petViewActiveOff={this.petViewActiveOff} token = {this.props.token} petToView={this.state.petToView}/>:<></>}
         </div>
-            
-        </div>
+         </div> 
+         
 
     );
     }

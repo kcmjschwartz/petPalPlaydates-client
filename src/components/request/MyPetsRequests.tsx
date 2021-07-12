@@ -56,7 +56,8 @@ class MyPetsRequestList extends Component<AcceptedProps>{
 myRequestPetMapper(){ 
     return this.props.myPetList.map((pet: IPets, index)=>
             {
-                return( /*How I want to display my pets*/
+                return( 
+                   
                     <div key={index}>                
                         <div >
                             <h4 className="petHeading" style={{fontSize:"3em", color: '#3E239E'}}>{pet.petName}</h4>
