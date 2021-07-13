@@ -43,7 +43,7 @@ class UpdateRequest extends Component<AcceptedProps, EditPetRequestState>{
             this.editMyRequest = this.editMyRequest.bind(this)
             this.updateStatus = this.updateStatus.bind(this)
             this.updateWayToContact = this.updateWayToContact.bind(this)
-            this.updateComments = this .updateComments.bind(this)
+            this.updateComments = this.updateComments.bind(this)
         }
     
         editMyRequest(e: React.FormEvent<HTMLFormElement>){

@@ -123,12 +123,13 @@ render(){
         <br/>
      
         <div>
-        <Button className="standardButton" onClick={() =>this.registerActiveOn()}>{this.state.registerActive?<Register activeOff={this.registerActiveOff} updateToken = {this.props.updateToken}/>:<></>}Get Started!</Button>
+        <Button className="standardButton btn-lg"  onClick={() =>this.registerActiveOn()}>{this.state.registerActive?<Register activeOff={this.registerActiveOff} updateToken = {this.props.updateToken}/>:<></>}Get Started!</Button>
         </div>
+        <br/>
         </div>
         </div>
         
-          <div style={{backgroundColor:"#16662B", width: "100%"}} >
+          <div style={{backgroundColor:"#16662B", width: "100%", marginBottom: "-20px"}} >
             <Timeline />
             </div>  
         

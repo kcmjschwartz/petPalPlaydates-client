@@ -88,7 +88,7 @@ class UsersIndex extends Component<AcceptedProps, UserState>{
 
 render(){
     return (
-        <div>
+        <div style={{marginTop:"75px"}}>
             
                 <h1 className="standardHeadingFont">All Users</h1>
                 

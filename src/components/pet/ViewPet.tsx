@@ -57,7 +57,7 @@ render(){
             <Modal isOpen= {true} className="standardFont">
             <h2 className="standardModalHeading">{this.props.petToView.petName}</h2>
             <ModalBody>
-            <img src={this.props.petToView.petType==='Dog'? `${dogIcon}`:this.props.petToView.petType==='Cat'?`${catIcon}`:this.props.petToView.petType==='Bird'? `${birdIcon}`:this.props.petToView.petType==='Reptile'? `${reptileIcon}`: this.props.petToView.petType==='Small Pet'?`${smallPetIcon}`: '...'} className="standardIcon" alt="..."/>
+            <img src={this.props.petToView.petType==='Dog'? `${dogIcon}`:this.props.petToView.petType==='Cat'?`${catIcon}`:this.props.petToView.petType==='Bird'? `${birdIcon}`:this.props.petToView.petType==='Reptile'? `${reptileIcon}`: this.props.petToView.petType==='Small Pet'?`${smallPetIcon}`: '...'} className="standardIcon" style={{height:"300px", width: "300px", marginLeft:"90px"}}alt="..."/>
             <br/>
            
             <h4 className="petHeading">About:</h4>

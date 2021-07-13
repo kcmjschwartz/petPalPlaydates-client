@@ -35,7 +35,7 @@ class Sitebar extends Component<AcceptedProps>{
 render(){
     return(
      
-        <div >
+        <div style={{marginTop:"0px", display:"flex", justifyContent:"center"}}>
         <div className="navbar-style">
             <Navbar expand="lg" >
                 <Nav className="my-2 my-lg-0" style={{ maxHeight: '100px' }}>

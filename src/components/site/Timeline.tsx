@@ -66,10 +66,10 @@ const TimelineView = () =>{
           <Paper elevation={3} className={classes.paper}>
             {/* <Typography variant="h6" component="h1"> */}
             <h4 style={{fontWeight:"bold",color:'#3E239E'}}> Browse Available PetPals</h4> 
-            <Typography className="standardFont">Peruse the Available PetPals to find one you would love to play with!</Typography>
+            <Typography className="standardFont">Peruse the available PetPals to find one you would love to play with!</Typography>
             <h4 style={{fontWeight:"bold",color:'#3E239E'}}>or Add Your Own Pets</h4>
             {/* </Typography> */}
-            <Typography className="standardFont">Add Your Pets as PetPals so they can get the extra love they deserve!</Typography>
+            <Typography className="standardFont">Add your pets as PetPals so they can get the extra love they deserve!</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
@@ -85,7 +85,7 @@ const TimelineView = () =>{
             {/* <Typography variant="h6" component="h1"> */}
             <h4 style={{fontWeight:"bold",color:'#3E239E'}}>Request a PlayDate</h4>
             {/* </Typography> */}
-            <Typography className="standardFont">Once you find a pet you would love to hangout with, send a request to their owner.The owner will reach out to via the way to contact you list on the request to schedule the PlayDate.</Typography>
+            <Typography className="standardFont">Once you find a pet you would love to hangout with, send a request to their owner for a PlayDate. </Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
@@ -101,7 +101,7 @@ const TimelineView = () =>{
             {/* <Typography variant="h6" component="h1"> */}
             <h4 style={{fontWeight:"bold",color:'#3E239E'}}>Schedule</h4>
             {/* </Typography> */}
-            <Typography className="standardFont">Find a time that works for you to meet with the pet owner and their PetPal.</Typography>
+            <Typography className="standardFont">Find a time that works for you to meet with the pet owner and their pet.</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
@@ -132,13 +132,14 @@ const TimelineView = () =>{
             {/* <Typography variant="h6" component="h1"> */}
             <h4 style={{fontWeight:"bold",color:'#3E239E'}}>Repeat!</h4>
             {/* </Typography> */}
-            <Typography className="standardFont">Because you love </Typography>
+            <Typography className="standardFont">Because you love pets!</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
     </Timeline>
 
-
+<br/>
+<br/>
         </div>
 
     )

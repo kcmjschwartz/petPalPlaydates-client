@@ -28,9 +28,8 @@ interface IPets{
 
 class MyPetList extends Component<AcceptedProps>{
     constructor(props:AcceptedProps){
-        super(props);{
+        super(props);
 
-        }
         this.myPetMapper=this.myPetMapper.bind(this)
         this.deleteMyPet= this.deleteMyPet.bind(this)
     }

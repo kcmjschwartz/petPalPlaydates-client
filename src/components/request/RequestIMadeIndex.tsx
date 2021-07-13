@@ -100,7 +100,7 @@ class MyRequestsIndex extends Component<AcceptedProps, RequestsState>{
 
 render(){
     return (
-        <div>
+        <div style={{marginTop:"75px"}}>
             
                 <h1 className="standardHeadingFont">My Requests</h1>
                 <div className="petDisplay">

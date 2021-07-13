@@ -82,7 +82,7 @@ class AllPetsIndex extends Component<AcceptedProps, AllPetsState>{
 render(){
     return (
       
-        <div>
+        <div style={{marginTop:"75px"}}>
         <h1 className="standardHeadingFont">Meet The PetPals</h1>
              <div className="petDisplay">
                  <PetList petList={this.state.pets} viewThisPet = {this.viewThisPet} petViewActiveOn ={this.petViewActiveOn} token = {this.props.token}/>

@@ -51,7 +51,7 @@ type AcceptedProps={
             })
             .then((response) => response.json())
             .then((result) =>{
-                console.log(result);
+                // console.log(result);
                 this.props.updateToken(result.sessionToken, result.user.role);
                 
             }).then(()=>this.props.activeLoginOff())

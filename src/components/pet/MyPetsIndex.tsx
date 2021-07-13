@@ -101,7 +101,7 @@ class MyPetsIndex extends Component<AcceptedProps, AllPetsState>{
 
 render(){
     return (
-        <div>
+        <div style={{marginTop:"75px"}}>
             
                 <h1 className="standardHeadingFont">My Pets</h1>
                 <div style={{display:'flex', justifyContent:'center', alignContent:'center', marginTop:'-30px'}}><button className= "btn btn-lg addPetButton" onClick={() =>this.myPetAddActiveOn()}>{this.state.myPetAddActive ?<CreatePet myPetAddActiveOff={this.myPetAddActiveOff} token= {this.props.token}fetchMyPets={this.fetchMyPets}/>:<></>}Add My Pet</button></div>
@@ -111,7 +111,7 @@ render(){
             
             <div className="petDisplay">
 
-                {this.state.myPets.length===0 ? <h3 className = "standardFont">No Pets to Display.</h3>: null}
+                {this.state.myPets.length===0 ? <h3 className = "standardFont">No Pets to Display.</h3>: 
                 <Table>
                     <thead>
                         <tr>
@@ -128,7 +128,7 @@ render(){
 
                 {this.state.myPetEditActive?<UpdatePet myPetEditActiveOff={this.myPetEditActiveOff} token = {this.props.token} myPetToEdit={this.state.myPetToEdit} fetchMyPets={this.fetchMyPets}/>:<></>}
                 </tbody>
-                </Table>
+                </Table>}
         </div>
             
         </div>

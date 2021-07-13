@@ -23,9 +23,9 @@ interface IUsers{
 
 class UserList extends Component<AcceptedProps>{
     constructor(props:AcceptedProps){
-        super(props);{
+        super(props);
 
-        }
+        
         this.userMapper=this.userMapper.bind(this)
         this.deleteUser= this.deleteUser.bind(this)
     }

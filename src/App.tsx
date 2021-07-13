@@ -44,7 +44,9 @@ updateToken(newToken:string, newRole:string){
     this.setState({
       sessionToken: newToken,
       sessionRole: newRole
-    },() =>console.log(this.state.sessionToken, this.state.sessionRole))
+    },
+    // () =>console.log(this.state.sessionToken, this.state.sessionRole)
+    )
     
 }
 

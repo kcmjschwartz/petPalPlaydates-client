@@ -36,9 +36,8 @@ interface IPets{
 
 class MyRequestList extends Component<AcceptedProps>{
     constructor(props:AcceptedProps){
-        super(props);{
+        super(props);
 
-        }
         this.myRequestMapper=this.myRequestMapper.bind(this)
         this.deleteMyRequest= this.deleteMyRequest.bind(this)
     }
