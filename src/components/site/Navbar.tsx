@@ -41,14 +41,14 @@ render(){
                 <Nav className="my-2 my-lg-0" style={{ maxHeight: '100px' }}>
                  <div>
                 <NavDropdown title= "Pets" id ="navbarScrollingDropdown">
-                    <NavDropdown.Item className="dropdownFont"><Link to ='/allpets'>All PetPals</Link></NavDropdown.Item>
-                    <NavDropdown.Item  className="dropdownFont"><Link to = '/mypets'>My Pets</Link></NavDropdown.Item>
+                    <NavDropdown.Item className="dropdownFont"><Link to ='/allpets' style={{color:'#3E239E'}}>All PetPals</Link></NavDropdown.Item>
+                    <NavDropdown.Item  className="dropdownFont"><Link to = '/mypets' style={{color:'#3E239E'}}>My Pets</Link></NavDropdown.Item>
                 </NavDropdown>
                 </div>
                  <div >
                 <NavDropdown title= "Requests" id ="navbarScrollingDropdown">
-                    <NavDropdown.Item  className="dropdownFont"><Link to = '/mypetsrequests'>For My Pets</Link></NavDropdown.Item>
-                    <NavDropdown.Item  className="dropdownFont"><Link to ='/myrequests'>For My PetPals</Link></NavDropdown.Item>
+                    <NavDropdown.Item  className="dropdownFont" ><Link to = '/mypetsrequests'style={{color:'#3E239E'}}>For My Pets</Link></NavDropdown.Item>
+                    <NavDropdown.Item  className="dropdownFont"><Link to ='/myrequests' style={{color:'#3E239E'}}>For My PetPals</Link></NavDropdown.Item>
                 </NavDropdown>
                 </div>
                  
@@ -62,7 +62,7 @@ render(){
                 </div>
                  <div>
                  <NavDropdown title= "Admin" id ="navbarScrollingDropdown" style= {{visibility: this.props.role==="admin" ? "visible" : "hidden"}}>
-                    <NavDropdown.Item  className="dropdownFont"><Link to = '/adminusers'>Manage Users</Link></NavDropdown.Item>
+                    <NavDropdown.Item  className="dropdownFont"><Link to = '/adminusers' style={{color:'#3E239E'}}>Manage Users</Link></NavDropdown.Item>
                     {/*Dropdown Items for Reviews if time allows
                      <NavDropdown.Item  className="dropdownFont">Manage Reviews</NavDropdown.Item> */}
                 </NavDropdown>    

@@ -64,7 +64,7 @@ render(){
             
             <Button className="headerButton" onClick={() =>this.loginActiveOn()}style= {{visibility: localStorage.getItem('token') ? "hidden" : "visible"}}>{this.state.loginActive?<Login activeLoginOff={this.loginActiveOff} updateToken = {this.props.updateToken}/>:<></>}Login</Button>
             
-            <Button href="/" onClick={()=>this.props.clearToken()} className="headerButton"style= {{visibility: localStorage.getItem('token') ? "visible" : "hidden"}}>Logout</Button>
+            <Button href="/" onClick={()=>this.props.clearToken()} className="headerButton"style= {{visibility: localStorage.getItem('token') ? "visible" : "hidden", color: '#3E239E'}}>Logout</Button>
             
             </div>
            
