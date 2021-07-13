@@ -1,3 +1,72 @@
+
+# Welcome to PetPal Playdates - For people who need a pet fix and pets that need a people fix.
+
+`User Stories`
+
+The Animal Lover:
+	As an animal lover that lives in an apartment that doesn’t allow pets, I would like to request a playdate with a pet to give them attention and satisfy my need for interaction with animals.
+
+The Pet Owner:
+	As a pet owner, sometimes my pet needs more attention than I can give them so I would like to list my pet for playdates to get the additional attention they deserve.
+
+
+
+# How it Works:
+
+1. Users Register for an Account using one of two "Get Started!" Buttons(one in the header and one in the body).  Or they login via the button in the header. Registration and Login are both down through modals
+    
+
+2. Users can browse the PetPals that are available for playdates.
+3. Users can click on the "Meet {Pet's Name}" button to view more information on the pet in a modal.
+4. Users can click on the "Request A PlayDate" button to open a modal to submit their request.
+5. Users can view, update, and delete requests they have made in Requests> For My PetPals on the navbar.
+6. Pet Owners can add, update, and delete their pets in Pets> My Pets on the navbar.  
+7. Pet Owners can view and update the status on requests for playdates with their pets in Requests> For My Pets on the navbar.
+8. Admin users have access to view all users, upgrade users to an admin role, and delete users in Admin> Manage Users.
+
+
+Deployed URL: https://kcs-petpals.herokuapp.com/
+
+Sample User account:
+Sample Admin account:
+
+# Resources
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
