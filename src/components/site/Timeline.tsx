@@ -47,7 +47,7 @@ const TimelineView = () =>{
             {/* <Typography variant="h6" component="h1" > */}
             <h4 style={{fontWeight:"bold",color:'#3E239E'}}>Register as a User</h4>
             {/* </Typography> */}
-            <Typography className="standardFont">Create an account by clicking "Get Started!" Remember to mind you manners or our admins will remove your account.</Typography>
+            <Typography className="standardFont">Create an account by clicking "Get Started!" Remember to mind your manners or our admins will remove your account.</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>

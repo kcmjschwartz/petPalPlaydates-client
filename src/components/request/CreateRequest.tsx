@@ -102,11 +102,12 @@ render(){
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="wayToContact" className="petHeading"style={{fontSize:'2em', fontFamily:"'Luckiest Guy', cursive"}}>Best Way to Contact:</Label>
+                        <p className="standardFont">Include email address and/or phone number.</p>
                         <Input name="wayToContact" value={this.state.wayToContact} onChange={(e) => this.wayToContactUpdate(e)} required/>
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="comments" className="petHeading"style={{fontSize:'2em'}}>Comments:</Label>
-                        <p className="standardFont">Please share schedule availability and any additional information for the pet owener.</p>
+                        <p className="standardFont">Please share schedule availability and any additional information for the pet owner.</p>
                         <Input type="textarea" name="comments" value={this.state.comments} onChange={(e) => this.commentsUpdate(e)} required/>
                     </FormGroup>
                     <Button className="standardButton" type="submit">Submit</Button>
