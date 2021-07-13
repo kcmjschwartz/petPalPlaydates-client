@@ -57,7 +57,7 @@ render(){
     <div >
         <Navbar className= "header">
             <div>
-                <h2>PetPal PlayDates</h2>
+                <h2 ><a href='/' >PetPal PlayDates</a></h2>
             </div>   
             <div>
             <Button className="headerButton" onClick={() =>this.registerActiveOn()}style= {{visibility: localStorage.getItem('token') ? "hidden" : "visible"}}>{this.state.registerActive?<Register activeOff={this.registerActiveOff} updateToken = {this.props.updateToken} />:<></>}Get Started!</Button>
