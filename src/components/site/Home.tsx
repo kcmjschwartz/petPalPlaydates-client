@@ -56,9 +56,9 @@ render(){
           
         <br/>  
         <h1 className="standardHeadingFont">PetPal PlayDates</h1>
-        <p>Cupcake ipsum dolor sit. Amet biscuit cookie jelly beans. Sweet roll chocolate cake lollipop powder jelly beans. Chocolate cake brownie liquorice pie chocolate bar jelly beans tiramisu jelly-o jelly-o.</p>
+        
+        <h3 className="petHeading"style={{fontSize:'2em', fontFamily:"'Luckiest Guy', cursive"}}>For people that need a pet fix and pets that need a people fix.</h3>
         <br/>
-
         <div className= "carousel">
         <Carousel fade>
           <Carousel.Item interval={8000}>
@@ -121,7 +121,7 @@ render(){
       </div>
 
         <br/>
-        <p>Cupcake ipsum dolor sit amet caramels donut. Jujubes pie halvah bonbon croissant. Dragée cake jelly chocolate cake. Soufflé oat cake macaroon fruitcake. Topping tart pastry dragée. Candy canes tootsie roll gummi bears cupcake. Tart ice cream marshmallow cotton candy toffee sesame snaps macaroon topping.</p>
+     
         <div>
         <Button className="standardButton" onClick={() =>this.registerActiveOn()}>{this.state.registerActive?<Register activeOff={this.registerActiveOff} updateToken = {this.props.updateToken}/>:<></>}Get Started!</Button>
         </div>
