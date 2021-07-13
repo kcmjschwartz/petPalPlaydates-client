@@ -60,13 +60,12 @@
     `Update Role`: https://github.com/kcmjschwartz/petPalPlaydates-client/blob/main/screenshots/UpdateRole.png
 
 
+# Check it out 
 `Deployed Client URL`: https://kcs-petpals.herokuapp.com/
 
 `Deployed Server`: https://kcs-petpals-server.herokuapp.com/
 
 `Server Repo`: https://github.com/kcmjschwartz/petPalPlaydates-server
-
-# Check it out 
 
 `Sample User account`: sampleuser@email.com / petPals!
 
