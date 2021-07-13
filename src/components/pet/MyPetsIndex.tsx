@@ -111,7 +111,7 @@ render(){
             
             <div className="petDisplay">
 
-                {this.state.myPets.length===0 ? <h3 className = "standardFont">No Pets to Display.</h3>: 
+                {this.state.myPets.length===0 ? <h3 className = "standardFont">No Pets to Display</h3>: 
                 <Table>
                     <thead>
                         <tr>

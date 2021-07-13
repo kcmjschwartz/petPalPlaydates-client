@@ -116,7 +116,7 @@ render(){
             
                 <h1 className="standardHeadingFont">Requests for My Pets</h1>
                 <div className="petDisplay">
-                {this.state.myPets.length === 0? <h4 className="standardFont">No Requests to Display</h4>:
+                {this.state.myPets.length === 0? <h3 className="standardFont">No Requests to Display</h3>:
                 <div>
                 <MyPetsRequestList myPetList={this.state.myPets} editMyPetsRequest = {this.editMyPetsRequest} myPetsRequestEditActiveOn ={this.myPetsRequestEditActiveOn} token = {this.props.token} fetchMyPetsRequests={this.fetchMyPetsRequests}/>
 

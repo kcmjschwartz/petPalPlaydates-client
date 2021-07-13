@@ -105,7 +105,7 @@ render(){
                 <h1 className="standardHeadingFont">My Requests</h1>
                 <div className="petDisplay">
 
-                {this.state.myRequests.length===0 ? <h3 className = "standardFont">No Requests to Display.</h3>: 
+                {this.state.myRequests.length===0 ? <h3 className = "standardFont">No Requests to Display</h3>: 
                 <Table>
                     <thead>
                         <tr>
